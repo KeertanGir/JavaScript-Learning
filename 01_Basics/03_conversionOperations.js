@@ -30,3 +30,16 @@ let strNum = String(num)
 
 console.log(strNum)
 console.log(typeof strNum)
+
+
+// *************************** OPERATIONS *************************
+
+// let num1 = 12
+// let num2 = -num1
+// console.log(num2)
+
+let counterSc = 100;
+++counterSc // prefix increment
+counterSc++ // postfix Increment
+console.log(counterSc)
+
