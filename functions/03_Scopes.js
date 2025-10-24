@@ -15,3 +15,40 @@ console.log( "Outer : ", a);
 // console.log(b);
 console.log(c);
 
+
+// ++++++++++++++++++++  Scopes IN Depth +++++++++++++++++++
+// Nested Funtion and their Scopes
+function one(){
+    const username = "Keertan gir";
+
+    function two(){
+        const webPage = " Github";
+        console.log(username + webPage);
+    }
+
+    // console.log(webPage); // Give Error
+
+    two();
+}
+// console.log(username); // error
+one();
+
+// ++++++++++++++++++ Scopes With If +++++++++++++++++++++
+
+if(true){
+    const user = "keertan";
+    if(user === "keertan"){
+        const web = " GitHUb";
+        console.log(user + web);
+    }
+    // console.log(web);  // Give Error > ReferenceError
+    
+}
+
+// console.log(user); // Give ReferenceError
+
+
+
+// +++++++++++ Mini Hoisting +++++ Intresting ++++++++++++++++
+
+
