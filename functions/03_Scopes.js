@@ -51,4 +51,20 @@ if(true){
 
 // +++++++++++ Mini Hoisting +++++ Intresting ++++++++++++++++
 
+console.log(addOne(2)); // can acces addOne Before initialization
+function addOne(num) {
+    return num + 1;
+}
+
+console.log(addOne(2)); // 3
+
+
+
+
+console.log(addTwo(4)); // ReferenceError: Cannot access 'addTwo' before initialization
+
+const addTwo = function(num2){
+    return num2 + 2;
+}
+console.log(addTwo(4)); // 6
 
