@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Two</title>
+</head>
+
+<body style="background-color: #212121; color:aliceblue">
+
+</body>
+
+<script>
+
+    function createADiv(textContent, colorCode, DivClassName) {
+
+        const div = document.createElement('div')
+        // console.log(div);
+        div.className = DivClassName
+        div.id = Math.round(Math.random() * 10 + 1);
+        div.setAttribute("title", "Div Banaya hy")
+        div.style.backgroundColor = colorCode
+        div.style.padding = "12px"
+        // div.innerHTML = "My Name is Keertan Gir"
+        const addText = document.createTextNode(textContent)
+        div.appendChild(addText)
+
+
+        // yeh Div ko page per Show Karwata hy
+        document.body.appendChild(div)
+    }
+
+    clrArr = ["green" , "red" , "blue" , "pink" , "aqua"];
+    
+    
+
+    for(let i = 0; i<clrArr.length; i++){
+
+        createADiv(`The Color Is ${clrArr[i]} and My name is Keertan ${i+1}`, clrArr[i], "Main");
+    
+    }
+
+</script>
+
+</html>
